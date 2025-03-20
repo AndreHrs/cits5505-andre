@@ -812,25 +812,104 @@
     </div>
 
     <div class="container mt-4">
-      <p class="fw-bold">notes:</p>
+      <p class="fw-bold text-xl">Notes:</p>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam aliquam
-        tortor metus, in dictum quam bibendum nec. Curabitur suscipit bibendum
-        egestas. Vivamus quis malesuada tellus. Pellentesque habitant morbi
-        tristique senectus et netus et malesuada fames ac turpis egestas. Nunc
-        tempor viverra enim. Vivamus porttitor iaculis sapien ac bibendum.
-        Curabitur vulputate felis at pulvinar lobortis. Maecenas elementum
-        tempor nisl ac suscipit. Sed a felis euismod, ultricies ligula non,
-        sodales ante. Integer varius elementum nunc, vel tempus orci feugiat
-        nec. In hac habitasse platea dictumst. Duis vestibulum mi et mattis
-        bibendum. Pellentesque fringilla metus id ullamcorper tristique. In
-        venenatis nunc ac pharetra pharetra. In hac habitasse platea dictumst.
-        Sed porttitor mollis erat sed finibus.
+        So far we have talked about best practices. But did you know that you
+        can actually help yourself in that context by using
+        <span class="fw-bold">linter and code formatter</span>?
+      </p>
+      <p class="fw-bold text-base">What is Linter?</p>
+      <p>
+        Linter or Linting tools are automated tools that analyze source code to
+        detect potential errors, security vulnerabilities, or coding style
+        issues.
+        <a href="#ref-9" class="text-decoration-none"><sup>[9]</sup></a
+        >It will greatly helps your code quality. Especially when we are using
+        javascript where weird things can happen.
+      </p>
+      <p>
+        The original lint tool was designed to analyze C source code for
+        potential errors and stylistic issues. Since then, linting tools have
+        evolved to work with a variety of programming languages, including
+        JavaScript, Python, and Ruby.
+      </p>
+      <p>
+        Linting tools are useful for a number of reasons. Firstly, they help you
+        catch errors early in the development process, when they are easier and
+        cheaper to fix. <br />Secondly, they can help promote coding standards
+        and best practices within a development team, ensuring that code is
+        consistent and maintainable. <br />Finally, they can help you identify
+        potential security vulnerabilities in your code, reducing the risk of a
+        breach.<a href="#ref-9" class="text-decoration-none"><sup>[9]</sup></a>
+      </p>
+      <p>
+        One of the popular linting tools for Javascript is
+        <span class="fw-bold">
+          <a
+            href="https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint"
+            target="_blank"
+            >ESLint</a
+          ></span
+        >. Which you can also get as VS Code extension
+        <a
+          href="https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint"
+          target="_blank"
+          >here</a
+        >
+        .
+      </p>
+      <p class="fw-bold text-base">What is Code Formatter?</p>
+      <p>
+        Code formatter are tools that help you format source code automatically.
+        It is generally accepted that having a common style guide is valuable
+        for a project and team.<a href="#ref-10" class="text-decoration-none"
+          ><sup>[10]</sup></a
+        >
+      </p>
+      <p>
+        <span class="fst-italic"
+          >I want to write code. Not spend cycles on formatting</span
+        >.<a href="#ref-10" class="text-decoration-none"><sup>[10]</sup></a> Is
+        one of the motivation to adopt a code formatter.
+      </p>
+      <p>
+        Most of the time readability has something it do with indentation of
+        code and code style:
+      </p>
+      <ol>
+        <li>
+          javascript accepts both single quotes and double quotes. Which one
+          should you use across the whole project
+        </li>
+        <li>how many indentations are needed? 2 spaces? 4 spaces?</li>
+        <li>sometimes I forgot to add semicolon</li>
+        <li>
+          after adding some arguments to function call, it exceeds 80 characters
+          and it's a pain to line break it manually
+        </li>
+      </ol>
+
+      <p>
+        Adopting code formatter such as
+        <span class="fw-bold"
+          ><a
+            href="https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode"
+            >Prettier</a
+          ></span
+        >
+        will enforces a consistent code style across all your code base.<a
+          href="#ref-11"
+          class="text-decoration-none"
+          ><sup>[11]</sup></a
+        >
+        Group project with multiple collaborators will greatly benefit from the
+        consistent styling. This can be easily done by sharing the prettier
+        configuration such as in the git repository.
       </p>
     </div>
 
     <div class="container mt-4">
-      <p class="fw-bold">References:</p>
+      <p class="fw-bold text-xl">Notes:</p>
       <ol>
         <li id="ref-1">
           "HTML Style Guide," W3Schools, 2024. [Online]. Available:
@@ -898,6 +977,27 @@
             href="https://www.linkedin.com/advice/1/how-can-you-use-linter-improve-your-code-quality-7eace"
             target="_blank"
             >https://www.linkedin.com/advice/1/how-can-you-use-linter-improve-your-code-quality-7eace</a
+          >. [Accessed: 20-Mar-2025].
+        </li>
+        <li id="ref-9">
+          "Using Prettier and JSLint," freeCodeCamp, 2024. [Online]. Available:
+          <a
+            href="https://www.freecodecamp.org/news/using-prettier-and-jslint"
+            target="_blank"
+            >https://www.freecodecamp.org/news/using-prettier-and-jslint</a
+          >. [Accessed: 20-Mar-2025].
+        </li>
+        <li id="ref-10">
+          "Why Prettier?," Prettier Documentation, 2024. [Online]. Available:
+          <a href="https://prettier.io/docs/why-prettier" target="_blank"
+            >https://prettier.io/docs/why-prettier</a
+          >. [Accessed: 20-Mar-2025].
+        </li>
+        <li id="ref-11">
+          "What is Prettier?," Prettier Documentation, 2024. [Online].
+          Available:
+          <a href="https://prettier.io/docs/" target="_blank"
+            >https://prettier.io/docs/</a
           >. [Accessed: 20-Mar-2025].
         </li>
       </ol>
