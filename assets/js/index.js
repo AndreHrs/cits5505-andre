@@ -4,47 +4,7 @@ function toggleProgressSection() {
   section.classList.toggle("hidden");
 }
 
-// Initialize cards and progress
-document.addEventListener("DOMContentLoaded", function () {
-  const cards = [
-    { id: 1, title: "Task 1", description: "Description 1" },
-    { id: 2, title: "Task 2", description: "Description 2" },
-    { id: 3, title: "Task 3", description: "Description 3" },
-  ];
-
-  // Load checked state from localStorage
-  const checkedItems = JSON.parse(localStorage.getItem("checkedItems")) || [];
-
-  // Create cards
-  const cardContainer = document.getElementById("cardContainer");
-  cards.forEach((card) => {
-    const isChecked = checkedItems.includes(card.id);
-    cardContainer.innerHTML += `
-            <div class="col-md-4 mb-3">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">${card.title}</h5>
-                  <p class="card-text">${card.description}</p>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="${
-                      card.id
-                    }" 
-                      ${
-                        isChecked ? "checked" : ""
-                      } onchange="updateProgress(this)">
-                    <label class="form-check-label">Complete</label>
-                  </div>
-                </div>
-              </div>
-            </div>
-          `;
-  });
-
-  updateProgressBar();
-  updateLottiePlayer();
-});
-
-function updateProgress(checkbox) {
+function updateProgress(currentContext) {
   const checkedItems = Array.from(
     document.querySelectorAll(".form-check-input:checked")
   ).map((input) => parseInt(input.value));
@@ -56,25 +16,83 @@ function updateProgress(checkbox) {
 function updateProgressBar() {
   const total = document.querySelectorAll(".form-check-input").length;
   const checked = document.querySelectorAll(".form-check-input:checked").length;
-  const progress = (checked / total) * 100;
+  const progress = total ? (checked / total) * 100 : 0;
 
-  document.getElementById("progressBar").style.width = `${progress}%`;
+  const progressBar = document.getElementById("progressBar");
+  progressBar.style.width = `${progress}%`;
   updateLottiePlayer();
 }
 
 function updateLottiePlayer() {
   const total = document.querySelectorAll(".form-check-input").length;
   const checked = document.querySelectorAll(".form-check-input:checked").length;
-  const progress = (checked / total) * 100;
+  const progress = total ? (checked / total) * 100 : 0;
 
-  // Update Lottie animation based on progress
-  if (progress === 100) {
-    lottiePlayer.load(
-      "https://andrehrs.github.io/cits5505-andre/assets/lottie/5star.lottie"
-    );
-  } else {
-    lottiePlayer.load(
-      "https://andrehrs.github.io/cits5505-andre/assets/lottie/1star.lottie"
-    );
+  const lottieStarMapping = [
+    {
+      threshold: 100,
+      url: "https://andrehrs.github.io/cits5505-andre/assets/lottie/5star.lottie",
+    },
+    {
+      threshold: 80,
+      url: "https://andrehrs.github.io/cits5505-andre/assets/lottie/4star.lottie",
+    },
+    {
+      threshold: 60,
+      url: "https://andrehrs.github.io/cits5505-andre/assets/lottie/3star.lottie",
+    },
+    {
+      threshold: 40,
+      url: "https://andrehrs.github.io/cits5505-andre/assets/lottie/2star.lottie",
+    },
+    {
+      threshold: 0,
+      url: "https://andrehrs.github.io/cits5505-andre/assets/lottie/1star.lottie",
+    },
+  ];
+
+  const lottiePandaMapping = [
+    {
+      threshold: 100,
+      url: "https://andrehrs.github.io/cits5505-andre/assets/lottie/panda-computer.lottie",
+    },
+    {
+      threshold: 75,
+      url: "https://andrehrs.github.io/cits5505-andre/assets/lottie/panda-laptop.lottie",
+    },
+    {
+      threshold: 50,
+      url: "https://andrehrs.github.io/cits5505-andre/assets/lottie/panda-music.lottie",
+    },
+    {
+      threshold: 0,
+      url: "https://andrehrs.github.io/cits5505-andre/assets/lottie/panda-disconnect.lottie",
+    },
+  ];
+
+  for (let item of lottieStarMapping) {
+    if (progress >= item.threshold) {
+      lottiePlayerStar.load(item.url);
+      break;
+    }
+  }
+
+  for (let item of lottiePandaMapping) {
+    if (progress >= item.threshold) {
+      lottiePlayerPanda.load(item.url);
+      break;
+    }
   }
 }
+
+// On page load, restore checked state from localStorage
+document.addEventListener("DOMContentLoaded", function () {
+  const checkedItems = JSON.parse(localStorage.getItem("checkedItems")) || [];
+  document.querySelectorAll(".form-check-input").forEach((checkbox) => {
+    const id = parseInt(checkbox.value);
+    if (checkedItems.includes(id)) {
+      checkbox.checked = true;
+    }
+  });
+  updateProgressBar();
+});

@@ -1,13 +1,38 @@
+.progress-section-wrapper {
+  position: relative;
+  margin-bottom: 20px;
+}
+
 .progress-section {
-  transition: transform 0.3s ease-in-out;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  max-height: 200px;
+  opacity: 1;
+  margin-bottom: 0;
 }
+
 .progress-section.hidden {
-  transform: translateY(-100%);
+  max-height: 0;
+  opacity: 0;
+  padding: 0 !important;
+  margin: 0;
+  visibility: hidden;
 }
+
 .toggle-button {
   position: absolute;
-  bottom: -30px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 1000;
+  background-color: var(--bs-primary);
+  border-radius: 0 0 5px 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.toggle-button #chevronIcon {
+  transition: transform 0.3s ease-in-out;
+}
+
+.progress-section.hidden ~ .toggle-button #chevronIcon {
+  transform: rotate(180deg);
 }
