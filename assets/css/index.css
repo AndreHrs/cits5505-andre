@@ -1,0 +1,13 @@
+.progress-section {
+  transition: transform 0.3s ease-in-out;
+}
+.progress-section.hidden {
+  transform: translateY(-100%);
+}
+.toggle-button {
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+}
