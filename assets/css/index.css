@@ -66,6 +66,11 @@
   transform: rotate(180deg);
 }
 
+.text-decoration-line-dotted {
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+}
+
 pre[class*="language-"],
 code[class*="language-"] {
   font-size: 12px;

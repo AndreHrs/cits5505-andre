@@ -6,6 +6,13 @@ Prism.plugins.NormalizeWhitespace.setDefaults({
   "right-trim": true,
 });
 
+const tooltipTriggerList = document.querySelectorAll(
+  '[data-bs-toggle="tooltip"]'
+);
+const tooltipList = [...tooltipTriggerList].map(
+  (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
+);
+
 // Toggle progress section
 function toggleProgressSection() {
   const section = document.querySelector(".progress-section");
