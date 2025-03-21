@@ -75,3 +75,7 @@ pre[class*="language-"],
 code[class*="language-"] {
   font-size: 12px;
 }
+
+.wrap-break {
+  word-wrap: break-word;
+}
