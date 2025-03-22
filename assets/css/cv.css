@@ -50,7 +50,7 @@
 
 .fish-layer {
   z-index: 3;
-  background-image: url("../images/fishes.webp");
+  background-image: url("../images/fish.webp");
 }
 
 .coral-layer {
@@ -83,6 +83,7 @@
   background-attachment: fixed;
   height: 100vh;
   position: relative;
+  margin-bottom: 0;
 }
 
 .parallax-text-container {
