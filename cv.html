@@ -5,13 +5,26 @@
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0" />
-    <title>My CV</title>
+    <title>My CV - Andre Harsono</title>
+    <link
+      rel="icon"
+      type="image/webp"
+      href="./assets/images/icon.webp" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet" />
     <link
-      href="./assets/css/index.css"
+      rel="stylesheet"
+      href="https://unpkg.com/bs-brain@2.0.4/tutorials/timelines/timeline-1/assets/css/timeline-1.css" />
+    <link
+      href="./assets/css/cv.css"
       rel="stylesheet" />
+    <link
+      href="./assets/css/utility.css"
+      rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
   </head>
   <body id="body">
     <header class="sticky-top">
@@ -59,9 +72,488 @@
         </div>
       </nav>
     </header>
-    <main> </main>
+    <main>
+      <div
+        id="diver"
+        class="diver">
+        <img
+          src="./assets/images/diving-png-4434.png"
+          alt="Decorative diver animation"
+          width="100"
+          height="100" />
+      </div>
+      <div class="parallax-container">
+        <div class="parallax-layer sea-layer"></div>
+        <div class="parallax-layer fish-layer"></div>
+        <div class="parallax-layer coral-layer"></div>
+        <div class="parallax-layer turtle-layer"></div>
+        <!-- Add this new text container -->
+        <div class="parallax-text-container">
+          <h1 class="display-1 text-white text-center fw-bold text-shadow">
+            Welcome to My Portfolio
+          </h1>
+          <p class="lead fw-bold text-white text-center text-shadow">
+            Scroll down to explore my journey
+          </p>
+          <p class="fw-bold text-white text-center text-shadow text-xs"
+            >Pstt. I have a cute diver who will follow you as you scroll
+            along</p
+          >
+        </div>
+      </div>
+      <div
+        class="container d-flex justify-content-center align-items-center mt-50vh">
+        <div class="card w-100">
+          <div class="card-body">
+            <h5 class="card-title">Get to Know Me</h5>
+            <div class="card-text row">
+              <div class="col-12 col-md-4 my-2">
+                <img
+                  class="w-100"
+                  src="./assets/images/profile.webp"
+                  alt="profile picture" />
+              </div>
+              <div class="col-12 col-md-8 my-2">
+                <div class="introduction">
+                  <h5 class="h5 fw-bold">Andre H.</h5>
+                  <p>Hi I am Andre, I came from 🇮🇩. </p>
+                  <p
+                    >Currently I'm studying Master of Information Technology in
+                    The University of Western Australia. <br />
+                    I aspire to be someone great in IT. I have particular
+                    interests in robotics
+                    <span class="text-sm fst-italic"
+                      >(even though I am not that good at math)</span
+                    >
+                    and Artificial Intelligence.</p
+                  >
+                </div>
+
+                <div class="contacts">
+                  <h5 class="h5 fw-bold">Contacts</h5>
+                  <div class="d-flex align-items-center">
+                    <dotlottie-player
+                      class="me-2"
+                      id="lottiePlayerStar"
+                      src="https://andrehrs.github.io/cits5505-andre/assets/lottie/phone-call.json"
+                      background="transparent"
+                      speed="1"
+                      style="width: 32px; height: 32px"
+                      autoplay
+                      loop></dotlottie-player>
+                    <a
+                      href="tel:+61490123456"
+                      class="text-reset text-sm"
+                      >+61 490 123 456</a
+                    ></div
+                  >
+
+                  <div class="d-flex align-items-center">
+                    <div class="icon-container me-2">
+                      <dotlottie-player
+                        src="https://andrehrs.github.io/cits5505-andre/assets/lottie/email.json"
+                        background="transparent"
+                        speed="1"
+                        autoplay
+                        loop
+                        class="upscale-icon"></dotlottie-player>
+                    </div>
+                    <a
+                      href="mailto:andre.harsono@not-real-email.com"
+                      class="text-reset text-sm"
+                      >andre.harsono@not-real-email.com</a
+                    ></div
+                  >
+                  <div class="d-flex align-items-center">
+                    <dotlottie-player
+                      class="me-2"
+                      id="lottiePlayerStar"
+                      src="https://andrehrs.github.io/cits5505-andre/assets/lottie/github-2.json"
+                      background="transparent"
+                      speed="1"
+                      style="width: 32px; height: 32px"
+                      autoplay
+                      loop></dotlottie-player>
+
+                    <a
+                      href="mailto:andre.harsono@not-real-email.com"
+                      class="text-reset text-sm"
+                      >github/AndreHrs</a
+                    >
+                  </div>
+
+                  <div class="d-flex align-items-center">
+                    <dotlottie-player
+                      class="me-2"
+                      id="lottiePlayerStar"
+                      src="https://andrehrs.github.io/cits5505-andre/assets/lottie/linkedin.json"
+                      background="transparent"
+                      speed="1"
+                      style="width: 32px; height: 32px"
+                      autoplay
+                      loop></dotlottie-player>
+
+                    <a
+                      href="https://www.linkedin.com/in/andre-harsono/"
+                      class="text-reset text-sm"
+                      target="_blank"
+                      >LinkedIn/andre-harsono</a
+                    >
+                  </div>
+                </div>
+
+                <hr />
+                <figure class="text-center">
+                  <blockquote class="blockquote">
+                    <p>
+                      Things may come to those who wait, but only the things
+                      left by those who hustle.
+                    </p>
+                  </blockquote>
+                  <figcaption class="blockquote-footer">
+                    Abraham Lincoln
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Education Container -->
+      <div
+        class="container d-flex justify-content-center align-items-center mt-50vh">
+        <div class="card w-100">
+          <div class="card-body">
+            <h2 class="card-title text-center">Education</h2>
+            <section class="bsb-timeline-1 py-5 py-xl-8">
+              <div class="container">
+                <div class="row justify-content-center">
+                  <div class="col-10 col-md-8 col-xl-6">
+                    <ul class="timeline">
+                      <li class="timeline-item">
+                        <div class="timeline-body">
+                          <div class="timeline-content">
+                            <div class="card border-0">
+                              <div class="card-body p-0">
+                                <h5 class="card-subtitle text-secondary mb-1"
+                                  >2024 - Present</h5
+                                >
+                                <h2 class="card-title mb-3"
+                                  >The University of Western Australia (UWA)</h2
+                                >
+                                <p class="card-subtitle"
+                                  >Master of Information Technology</p
+                                >
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+
+                      <li class="timeline-item">
+                        <div class="timeline-body">
+                          <div class="timeline-content">
+                            <div class="card border-0">
+                              <div class="card-body p-0">
+                                <h5 class="card-subtitle text-secondary mb-1"
+                                  >2016-2020</h5
+                                >
+                                <h2 class="card-title mb-3">STMIK Mikroskil</h2>
+                                <p class="card-subtitle"
+                                  >Bachelor Degree, Informatics Engineering,
+                                  Mobile and Web Development</p
+                                >
+                                <p class="card-text m-0"
+                                  >Final Grade: 3.85/4.0</p
+                                >
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+
+      <!-- Experience Container -->
+      <div
+        class="container d-flex justify-content-center align-items-center mt-50vh">
+        <div class="card w-100">
+          <div class="card-body">
+            <h2 class="card-title text-center">Experiences</h2>
+            <section class="bsb-timeline-1 py-5 py-xl-8">
+              <div class="container">
+                <div class="row justify-content-center">
+                  <div class="col-10 col-md-8 col-xl-6">
+                    <ul class="timeline">
+                      <li class="timeline-item">
+                        <div class="timeline-body">
+                          <div class="timeline-content">
+                            <div class="card border-0">
+                              <div class="card-body p-0">
+                                <h5 class="card-subtitle text-secondary mb-1"
+                                  >Oct 2022 to Jun 2024</h5
+                                >
+                                <h2 class="card-title mb-3">Blibli.com</h2>
+                                <p class="card-subtitle fw-bold"
+                                  >ASSOCIATE SOFTWARE DEVELOPMENT ENGINEER
+                                </p>
+                                <p
+                                  ><span class="badge text-bg-info">Java</span>
+                                  <span class="badge text-bg-info">VueJs</span>
+                                  <span class="badge text-bg-info">SQL</span>
+                                  <span class="badge text-bg-info"
+                                    >MongoDb</span
+                                  ></p
+                                >
+                                <div class="card-text m-0"
+                                  ><ul>
+                                    <li>
+                                      Worked with several backend microservices
+                                      and their operationals, primarily uses
+                                      Java Reactor
+                                    </li>
+                                    <li
+                                      >Actively contributing to the development
+                                      of "Sistem Informasi Pengadaan Sekolah
+                                      (SIPLah) / School Procurement Information
+                                      System" which is being developed in
+                                      partnership with Indonesian Ministry of
+                                      Education, Culture, Research, and
+                                      Technology</li
+                                    >
+                                    <li
+                                      >Built image compression feature running
+                                      on webworker for VueJs frontend used by
+                                      SIPLah web application.</li
+                                    >
+                                  </ul></div
+                                >
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+
+                      <li class="timeline-item">
+                        <div class="timeline-body">
+                          <div class="timeline-content">
+                            <div class="card border-0">
+                              <div class="card-body p-0">
+                                <h5 class="card-subtitle text-secondary mb-1"
+                                  >Sep 2022 to Apr 2023</h5
+                                >
+                                <h2 class="card-title mb-3"
+                                  >IRS Software Sdn Bhd
+                                </h2>
+                                <p class="card-subtitle fw-bold"
+                                  >OUTSOURCE SOFTWARE DEVELOPER
+                                </p>
+                                <p
+                                  ><span class="badge text-bg-info">C#</span>
+                                  <span class="badge text-bg-info"
+                                    >ASP.NET</span
+                                  >
+                                  <span class="badge text-bg-info"
+                                    >FastReport</span
+                                  >
+                                </p>
+                                <div class="card-text m-0"
+                                  ><ul>
+                                    <li>
+                                      Developed web application using ASP.NET
+                                      and reporting system with FastReport
+                                    </li>
+                                  </ul></div
+                                >
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+
+                      <li class="timeline-item">
+                        <div class="timeline-body">
+                          <div class="timeline-content">
+                            <div class="card border-0">
+                              <div class="card-body p-0">
+                                <h5 class="card-subtitle text-secondary mb-1"
+                                  >Sep 2020 to Jun 2024</h5
+                                >
+                                <h2 class="card-title mb-3">Self Employed </h2>
+                                <p class="card-subtitle fw-bold"
+                                  >FREELANCE SOFTWARE ENGINEER
+                                </p>
+                                <p
+                                  ><span class="badge text-bg-info">VueJs</span>
+                                  <span class="badge text-bg-info">C#</span>
+                                  <span class="badge text-bg-info">NodeJs</span>
+                                  <span class="badge text-bg-info"
+                                    >Laravel</span
+                                  >
+                                  <span class="badge text-bg-info"
+                                    >PostgreSQL</span
+                                  >
+                                  <span class="badge text-bg-info"
+                                    >MongoDB</span
+                                  >
+                                  <span class="badge text-bg-info"
+                                    >ExpressJS</span
+                                  >
+                                  <span class="badge text-bg-info"
+                                    >Typescript</span
+                                  >
+                                </p>
+                                <div class="card-text m-0"
+                                  ><ul>
+                                    <li>
+                                      Successfully built desktop software
+                                      tailored for cashier systems, accounting
+                                      tools, and inventory management systems.
+                                    </li>
+                                    <li
+                                      >Designed web landing pages and company
+                                      profile pages. Furthermore</li
+                                    >
+                                    <li
+                                      >Created web applications to enhance
+                                      operational efficiency in heavy equipments
+                                      rental company.</li
+                                    >
+                                    <li
+                                      >Developed fingerprint-based attendance
+                                      system for a local company based in
+                                      Binjai</li
+                                    >
+                                  </ul></div
+                                >
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+
+                      <li class="timeline-item">
+                        <div class="timeline-body">
+                          <div class="timeline-content">
+                            <div class="card border-0">
+                              <div class="card-body p-0">
+                                <h5 class="card-subtitle text-secondary mb-1"
+                                  >Mar 2019 to Oct 2022</h5
+                                >
+                                <h2 class="card-title mb-3"
+                                  >Universitas Mikroskil
+                                </h2>
+                                <p class="card-subtitle fw-bold"
+                                  >STUDENT ADMISSSION AND ADMINISTRATION STAFF
+                                </p>
+                                <p
+                                  ><span class="badge text-bg-info"
+                                    >Python</span
+                                  >
+                                  <span class="badge text-bg-info"
+                                    >Public Speaking</span
+                                  >
+                                  <span class="badge text-bg-info"
+                                    >Marketing</span
+                                  ></p
+                                >
+                                <div class="card-text m-0"
+                                  ><ul>
+                                    <li> Organizing student events </li>
+                                    <li
+                                      >Analyze alumni data to provide insights
+                                      for university managements
+                                    </li>
+                                    <li
+                                      >Actively promoting university in
+                                      roadshows
+                                    </li>
+                                    <li
+                                      >Provide consultation for high schoolers
+                                      to make informed decisions about their
+                                      choice of major
+                                    </li>
+                                    <li
+                                      >Helping students secure scholarships and
+                                      financial aid
+                                    </li>
+                                  </ul></div
+                                >
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+
+                      <li class="timeline-item">
+                        <div class="timeline-body">
+                          <div class="timeline-content">
+                            <div class="card border-0">
+                              <div class="card-body p-0">
+                                <h5 class="card-subtitle text-secondary mb-1"
+                                  >Apr 2017 to Jun 2022</h5
+                                >
+                                <h2 class="card-title mb-3"
+                                  >Universitas Mikroskil
+                                </h2>
+                                <p class="card-subtitle fw-bold"
+                                  >COMPUTER INSTRUCTOR
+                                </p>
+                                <p
+                                  ><span class="badge text-bg-info"
+                                    >Python</span
+                                  >
+                                  <span class="badge text-bg-info"
+                                    >Corel Draw</span
+                                  >
+                                  <span class="badge text-bg-info"
+                                    >Adobe Photoshop</span
+                                  >
+                                  <span class="badge text-bg-info">HTML</span>
+                                  <span class="badge text-bg-info">CSS</span>
+                                  <span class="badge text-bg-info"
+                                    >Javascript</span
+                                  >
+                                </p>
+                                <div class="card-text m-0"
+                                  ><ul>
+                                    <li>
+                                      Taught programming Fundamentals and Design
+                                      Fundamentals to grade 8 and grade 9
+                                      students
+                                    </li>
+                                    <li
+                                      >Taught web design for 10th and 11th grade
+                                      extracurricular</li
+                                    >
+                                  </ul></div
+                                >
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+
+      <div class="stars-container"> </div>
+    </main>
     <!-- Footer -->
-    <footer class="text-center text-lg-start bg-body-tertiary text-muted">
+    <footer
+      class="text-center text-lg-start bg-body-tertiary text-muted footer">
       <section class="py-4">
         <div class="container text-center text-md-start">
           <div class="row mt-3">
@@ -102,10 +594,10 @@
               <p class="text-uppercase fw-bold mb-4">Contact</p>
               <p
                 ><a
-                  href="mailto:andre.harsono@notrealemail.com"
+                  href="mailto:andre.harsono@not-real-email.com"
                   class="text-reset"
                   target="_blank">
-                  andre.harsono@notrealemail.com</a
+                  andre.harsono@not-real-email.com</a
                 ></p
               >
               <p>
@@ -142,8 +634,14 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/2.0.6/velocity.min.js"></script>
     <script
       src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
       type="module"></script>
+
+    <script
+      type="text/javascript"
+      src="./assets/js/cv.js"></script>
   </body>
 </html>
