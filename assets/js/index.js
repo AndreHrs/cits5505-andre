@@ -177,7 +177,6 @@ function showModalBasedOnProgress(roundedProgress) {
 function updateCategoriesProgressBar() {
   let strList = [];
   ["html", "css", "js"].forEach((category) => {
-    console.log("category", category);
     const total = document.querySelectorAll(
       `.form-check-input-required[data-category="${category}"]`
     ).length;
@@ -185,10 +184,13 @@ function updateCategoriesProgressBar() {
       `.form-check-input-required[data-category="${category}"]:checked`
     ).length;
     const progress = total ? (checked / total) * 100 : 0;
+    const roundedProgress = Math.round(progress);
 
-    document.getElementById(
-      `${category}ProgressBar`
-    ).style.width = `${progress}%`;
+    const progressBar = document.getElementById(`${category}ProgressBar`);
+    updateProgressBarWidthAndText(progressBar, roundedProgress);
+
+    const progressText = document.getElementById(`${category}TickProgress`);
+    progressText.textContent = `You ticked: ${checked} out of ${total} (${roundedProgress}%)`;
 
     strList.push(
       `${category.toUpperCase()}: ${checked} / ${total} (${Math.round(

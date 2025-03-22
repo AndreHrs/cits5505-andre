@@ -46,7 +46,7 @@
   bottom: 0px;
   transform: translateX(-50%);
   z-index: 1000;
-  background-color: var(--bs-primary);
+  background-color: var(--bs-warning);
   border-radius: 0 0 15px 15px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
